@@ -1,13 +1,15 @@
 # .bashrc
 
+sources='/home/chrifpa/.dotfiles/'
+
 # Source global definitions
 
 if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
 
-source .bashrc_interface
-source .bashrc_calls
+source $sources.bashrc_interface
+source $sources.bashrc_calls
 
 # host specific stuff
 
