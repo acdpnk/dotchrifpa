@@ -2,7 +2,7 @@
 
 function gitbranch {
 	if [ -e .git ]; then
-		git rev-parse --abbrev-ref HEAD
+		echo -n 'on '; git rev-parse --abbrev-ref HEAD
 	fi
 }
 
@@ -16,4 +16,4 @@ function promptsign {
 
 # prompt
 
-PS1='[$(date +%H:%M)] [\u@\h \W on $(gitbranch)]$(promptsign) '
+PS1='[$(date +%H:%M)] [\u@\h \W $(gitbranch)]$(promptsign) '
