@@ -30,7 +30,7 @@ if [ $HOSTNAME == "lipstick" ]; then
 	alias sub='sublime &'
 fi
 
-if [ $HoSTNAME == "igor" ]; then
+if [ $HOSTNAME == "igor" ]; then
 	alias dropbox='python /opt/./dropbox.py'	
 fi
 
