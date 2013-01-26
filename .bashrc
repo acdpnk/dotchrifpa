@@ -6,10 +6,12 @@ if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
 
+source .bashrc_interface
+
 #environmental stuff
 
 set -o vi
-PS1='[$(date +%H:%M)] [\u@\h \W]\$ '
+#PS1='[$(date +%H:%M)] [\u@\h \W] $(gitbranch)\$ '
 
 # host specific stuff
 

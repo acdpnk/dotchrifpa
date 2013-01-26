@@ -1,0 +1,19 @@
+# functions
+
+function gitbranch {
+	if [ -e .git ]; then
+		git rev-parse --abbrev-ref HEAD
+	fi
+}
+
+function promptsign {
+	if [ -e .git ]; then
+		echo ¥
+	else
+		echo $
+	fi
+}
+
+# prompt
+
+PS1='[$(date +%H:%M)] [\u@\h \W on $(gitbranch)]$(promptsign) '
