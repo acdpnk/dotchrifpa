@@ -7,11 +7,7 @@ if [ -f /etc/bashrc ]; then
 fi
 
 source .bashrc_interface
-
-#environmental stuff
-
-set -o vi
-#PS1='[$(date +%H:%M)] [\u@\h \W] $(gitbranch)\$ '
+source .bashrc_calls
 
 # host specific stuff
 
@@ -23,7 +19,7 @@ if [ $HOSTNAME == "lipstick" ]; then
 	alias sub='sublime &'
 
 	alias sshfsigor4='sshfs mrnda@`igor4`:/ /home/chrifpa/igorfs -p 1286'
-        alias sshfsigor='sshfs mrnda@[2001:6f8:900:f3d::2]:/ /home/chrifpa/igorfs'
+	alias sshfsigor='sshfs mrnda@[2001:6f8:900:f3d::2]:/ /home/chrifpa/igorfs'
 fi
 
 if [ $HOSTNAME != "igor" ]; then
@@ -36,7 +32,7 @@ if [ $HOSTNAME != "igor" ]; then
 fi
 
 if [ $HOSTNAME == "igor" ]; then
-	alias dropbox='python /opt/./dropbox.py'	
+	source .bashrc_igor	
 fi
 
 if [ $HOSTNAME != "cetus.uberspace.de" ]; then
