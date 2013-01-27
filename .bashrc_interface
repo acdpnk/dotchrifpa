@@ -1,13 +1,20 @@
 # functions
 
+function isgit {
+	echo $(git rev-parse --git-dir 2>&1 | grep -c fatal)
+}
+
+
+
 function gitbranch {
-	if [ -e .git ]; then
-		echo -n 'on '; git rev-parse --abbrev-ref HEAD
+	if [ $(isgit) == "0" ]; then
+		echo -n 'on '
+		git rev-parse --abbrev-ref HEAD
 	fi
 }
 
 function promptsign {
-	if [ -e .git ]; then
+	if [ $(isgit) == "0" ]; then
 		echo ¥
 	else
 		echo $
