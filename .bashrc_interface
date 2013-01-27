@@ -1,35 +1,33 @@
 # functions
 
-function isgit {
-	echo $(git rev-parse --git-dir 2>&1 | grep -c fatal)
-}
+	function isgit {
+		echo $(git rev-parse --git-dir 2>&1 | grep -c fatal)
+	}
 
-function gitisclean {
-	if [ $(isgit) == "0" ] && [ $(git status 2>&1 | grep -c clean) == "0" ]; then
-		echo •
-	fi
-}
+	function gitisclean {
+		if [ $(isgit) == "0" ] && [ $(git status 2>&1 | grep -c clean) == "0" ]; then
+			echo •
+		fi
+	}
 
-function gitbranch {
-	if [ $(isgit) == "0" ]; then
-		echo -n ' on '
-		git rev-parse --abbrev-ref HEAD
-	fi
-}
+	function gitbranch {
+		if [ $(isgit) == "0" ]; then
+			echo -n ' on '
+			git rev-parse --abbrev-ref HEAD
+		fi
+	}
 
-function promptsign {
-	if [ $(isgit) == "0" ]; then
-		echo ¥
-	else
-		echo $
-	fi
-}
+	function promptsign {
+		if [ $(isgit) == "0" ]; then
+			echo ¥
+		else
+			echo $
+		fi
+	}
 
 # prompt
-
-PS1='[$(date +%H:%M)] [\u@\h \W$(gitbranch)$(gitisclean)]$(promptsign) '
+	PS1='[$(date +%H:%M)] [\u@\h \W$(gitbranch)$(gitisclean)]$(promptsign) '
 
 
 # environmental stuff
-
-set -o vi
+	set -o vi
