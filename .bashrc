@@ -16,6 +16,7 @@ fi
 
 source $sources.bashrc_interface
 source $sources.bashrc_calls
+source $sources.bashrc_$HOSTNAME
 
 # host specific stuff
 
@@ -37,10 +38,6 @@ if [ $HOSTNAME != "igor" ]; then
 
         alias sshigor='ssh mrnda@2001:6f8:900:f3d::2'
         alias sftpigor='sftp -6 mrnda@[2001:6f8:900:f3d::2]'
-fi
-
-if [ $HOSTNAME == "igor" ]; then
-	source .bashrc_igor	
 fi
 
 if [ $HOSTNAME != "cetus.uberspace.de" ]; then
