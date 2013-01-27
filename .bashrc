@@ -1,6 +1,12 @@
 # .bashrc
 
-sources='/home/chrifpa/.dotfiles/'
+if [ $HOSTNAME == "lipstick" ]; then
+	sources='/home/chrifpa/.dotfiles/'
+elif [ $HOSTNAME == "igor" ]; then
+	sources='/home/mrnda/.dotfiles/'
+elif [ $HOSTNAME == "cetus.uberspace.de" ]; then
+	sources='/home/chrifpa/.dotfiles/'
+fi
 
 # Source global definitions
 
