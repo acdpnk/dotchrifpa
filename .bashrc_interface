@@ -6,7 +6,7 @@ function isgit {
 
 function gitisclean {
 	if [ $(isgit) == "0" ] && [ $(git status 2>&1 | grep -c clean) == "0" ]; then
-		echo '¤'
+		echo •
 	fi
 }
 
