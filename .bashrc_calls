@@ -1,0 +1,6 @@
+	alias cr='google-chrome &'
+	alias fil='nautilus &'
+	alias emp='empathy &'
+	alias qti='qtiplot &'
+	alias sub='sublime &'
+	alias py='python'
