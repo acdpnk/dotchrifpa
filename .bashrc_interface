@@ -3,7 +3,7 @@
 	function jobnumber {
 		if [ $(jobs | grep -c -e "[0-9]") != "0" ]; then
 			echo -n '['
-			echo -n $(jobs | grep -c -e "[0-9]")
+			echo -n $(( $(jobs | grep -c -e "[0-9]") - $(jobs | grep -c Done) - $(($(jobs | grep -c Terminated)*2)) ))
 			echo -n '] '
 		fi
 	}
