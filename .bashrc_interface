@@ -1,4 +1,12 @@
 # functions
+	
+	function jobnumber {
+		if [ $(jobs | grep -e -c "[0-9]") != "0" ]; then
+			echo -n '['
+			echo -n $(jobs | grep -e -c "[0-9]")
+			echo -n '] '
+		fi
+	}
 
 	function isgit {
 		echo $(git rev-parse --git-dir 2>&1 | grep -c fatal)
@@ -26,7 +34,7 @@
 	}
 
 # prompt
-	PS1='[\u@\h \W$(gitbranch)$(gitisclean)]$(promptsign) '
+	PS1='$(jobnumber)[\u@\h \W$(gitbranch)$(gitisclean)]$(promptsign) '
 
 
 # environmental stuff
