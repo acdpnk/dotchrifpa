@@ -4,3 +4,4 @@
 	alias qti='qtiplot &'
 	alias sub='sublime &'
 	alias py='python'
+	alias ea='sudo date > /dev/null ; sudo etherape &'
