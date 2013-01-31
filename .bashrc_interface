@@ -9,7 +9,7 @@
 	}
 
 	function activejobs {
-		if [ $(jobs | grep -c -e "[0-9]") != "0" ]; then
+		if [ $(jobs | grep -c Running) != "0" ] || [ $(jobs | grep -c Stopped) != "0" ]; then
 			echo 1 
 		else
 			echo 0
@@ -42,7 +42,7 @@
 	}
 
 # prompt
-	PS1='[\u@\h \W$(gitbranch)$(gitisclean)]~$(promptsign) '
+	PS1='[\u@\h \W$(gitbranch)$(gitisclean)]$(promptsign) '
 
 
 # environmental stuff
