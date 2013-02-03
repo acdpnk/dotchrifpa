@@ -5,3 +5,5 @@
 	alias umidden='sudo umount /home/chrifpa/Midden'
 
 	alias bat='echo `date +%H:%M:%S` `acpi`'
+
+	alias vnc='vncviewer &'
