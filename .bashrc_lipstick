@@ -1,8 +1,8 @@
-	alias sshfsigor4='sshfs mrnda@`igor4`:/ /home/chrifpa/igorfs -p 1286'
-	alias sshfsigor='sshfs mrnda@[2001:6f8:900:f3d::2]:/ /home/chrifpa/igorfs'
+#	alias sshfsigor4='sshfs mrnda@`igor4`:/ /home/chrifpa/igorfs -p 1286'
+#	alias sshfsigor='sshfs mrnda@[2001:6f8:900:f3d::2]:/ /home/chrifpa/igorfs'
 
-	alias midden='sshfs mrnda@[2001:6f8:900:f3d::2]:/home/mrnda/Midden /home/chrifpa/Midden'
-	alias umidden='sudo umount /home/chrifpa/Midden'
+#	alias midden='sshfs mrnda@[2001:6f8:900:f3d::2]:/home/mrnda/Midden /home/chrifpa/Midden'
+#	alias umidden='sudo umount /home/chrifpa/Midden'
 
 	alias bat='echo `date +%H:%M:%S` `acpi`'
 
