@@ -1,0 +1,38 @@
+# aliases for connecting with igor
+
+# IPv4
+#	alias igor4='cat /home/chrifpa/Dropbox/PlainText/.igor.ip.txt'
+#	alias sshigor4='ssh -p 1286 mrnda@`igor4`'
+#	alias sftpigor4='sftp -P 1286 mrnda@`igor4`'
+
+#IPv6
+	alias -g door='root@2001:6f8:900:f3d::2'
+	alias -g igor='mrnda@2001:6f8:900:8f3d:221:ccff:fe36:d63a'
+#	alias sftpigor='sftp -6 mrnda@[2001:6f8:900:f3d::2]'
+
+
+# aliases for connecting with cetus
+	alias -g uber="chrifpa@chrifpa.cetus.uberspace.de"
+#	alias sftpuber="sftp chrifpa@chrifpa.cetus.uberspace.de"
+
+# aliases for dropbox
+	alias drpstart='dropbox start'
+	alias drpstop='dropbox stop'
+	alias drpstat='dropbox status'
+	alias drpmon='PRVSTAT=" "; while true; do STAT="`dropbox status`"; if [ "$PRVSTAT" !=  "$STAT" ]; then echo `date +%H:%M:%S` --  $STAT; fi; PRVSTAT="$STAT"; sleep 1s; done'
+	alias drpstm='dropbox start; drpmon'
+
+# misc
+	alias dte='date +%y%m%d%H%M%S'
+	alias la='ls -a'
+	alias getip='curl icanhazip.com'
+
+
+# aliases for starting programs
+	alias cr='google-chrome &'
+	alias fil='nautilus &'
+	alias emp='empathy &'
+	alias qti='qtiplot &'
+	alias sub='sublime &'
+	alias py='python'
+	alias ea='sudo date > /dev/null ; sudo etherape &'

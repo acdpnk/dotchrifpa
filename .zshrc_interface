@@ -1,0 +1,46 @@
+# allow for functions in the prompt
+	
+	setopt PROMPT_SUBST
+
+# functions
+
+	function isgit {
+		echo $(git rev-parse --git-dir 2>&1 | grep -c fatal)
+	}
+
+	function gitisclean {
+		if [[ $(isgit) == "0" ]] && [[ $(git status 2>&1 | grep -c clean) == "0" ]]; then
+			echo •
+		fi
+	}
+
+	function gitbranch {
+		if [[ $(isgit) == "0" ]]; then
+			echo -n ' on '
+			git rev-parse --abbrev-ref HEAD 2>/dev/null
+		fi
+	}
+
+	function activejobs {
+		if [ $(jobs | grep -c -i Running) != "0" ] || [ $(jobs | grep -c -i Stopped) != "0" ]; then
+			echo 1 
+		else
+			echo 0
+		fi	
+	}
+
+	function promptsign {
+		if [[ $(activejobs) == "1" ]]; then
+			echo ¥
+		else
+			echo $
+		fi
+	}
+
+# prompt
+
+	PS1='[%n@%m %c$(gitbranch)$(gitisclean)]$(promptsign) '
+
+# environment
+
+	AUTO_CD=true
