@@ -27,3 +27,4 @@
 # source files
 	source $sources.zshrc_interface
 	source $sources.zshrc_aliases
+	source $sources.zshrc_$HOSTNAME
