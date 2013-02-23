@@ -6,7 +6,7 @@
 #	alias sftpigor4='sftp -P 1286 mrnda@`igor4`'
 
 #IPv6
-	alias -g door='root@2001:6f8:900:f3d::2'
+	alias -g thekla='root@2001:6f8:900:f3d::2'
 	alias -g igor='mrnda@2001:6f8:900:8f3d:221:ccff:fe36:d63a'
 #	alias sftpigor='sftp -6 mrnda@[2001:6f8:900:f3d::2]'
 
