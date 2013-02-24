@@ -16,11 +16,11 @@
 
 
 # determine path for sources by host
-	if [[ $HOSTNAME == "lipstick" ]]; then
+	if [[ $(hostname) == "lipstick" ]]; then
 		sources='/home/chrifpa/.dotfiles/'
-	elif [[ $HOSTNAME == "igor" ]]; then
+	elif [[ $(hostname) == "igor" ]]; then
 		sources='/home/mrnda/.dotfiles/'
-	elif [[ $HOSTNAME == "cetus.uberspace.de" ]]; then
+	elif [[ $(hostname) == "cetus.uberspace.de" ]]; then
 		sources='/home/chrifpa/.dotfiles/'
 	fi
 

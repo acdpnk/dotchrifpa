@@ -2,6 +2,11 @@
 	
 	setopt PROMPT_SUBST
 
+# general environment
+
+	AUTO_CD=true
+	autoload -U colors && colors
+
 # functions
 
 	function isgit {
@@ -39,8 +44,6 @@
 
 # prompt
 
-	PS1='[%n@%m %c$(gitbranch)$(gitisclean)]$(promptsign) '
+	PROMPT='[%n@%m %c$(gitbranch)$(gitisclean)]$(promptsign) '
+	RPROMPT='[%j][%T]'
 
-# environment
-
-	AUTO_CD=true
