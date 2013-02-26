@@ -8,6 +8,6 @@
 
 	alias vnc='vncviewer &'
 
-	alias igoron='echo "igor on" | ssh root@2001:6f8:900:f3d::2 &>/dev/null'
+	alias igoron='igr -p'
 
 #	alias sshfsecho='sshfs root@[2001:6f8:900:f3d::2]:/ /home/chrifpa/echofs'
