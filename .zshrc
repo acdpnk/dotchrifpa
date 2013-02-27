@@ -4,8 +4,12 @@
 	HISTFILE=~/.histfile
 	HISTSIZE=1000
 	SAVEHIST=1000
-	setopt appendhistory autocd nomatch
+	setopt appendhistory autocd nomatch correct_all share_history 
 	bindkey -v
+
+	## case-insensitive tab completion for filenames
+	zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
 	zstyle :compinstall filename '/home/chrifpa/.zshrc'
