@@ -1,0 +1,1 @@
+alias dropbox='python /opt/./dropbox.py'\talias vnc="vncserver -geometry 1024x600"
