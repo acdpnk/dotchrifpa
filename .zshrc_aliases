@@ -24,7 +24,7 @@
 
 # git
  	alias g='git'
-	alias ginit='git init'
+	alias gin='git init'
 	alias gadd='git add'
 	alias gcom='git commit -m'
 	alias gco='git checkout'
