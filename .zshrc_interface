@@ -18,6 +18,7 @@
 		;;
 		esac
 		}
+	chpwd #calling it so that the title bar is as designed directly after logging in
 
 # functions
 
