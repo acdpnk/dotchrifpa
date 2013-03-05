@@ -34,7 +34,7 @@
 
 	function gitbranch {
 		if [[ $(isgit) == "0" ]]; then
-			echo -n ' on '
+			echo -n ' on branch '
 			git rev-parse --abbrev-ref HEAD 2>/dev/null
 		fi
 	}
@@ -57,7 +57,8 @@
 
 # prompt
 
-	PROMPT=$'┌[%n@%m] [/dev/%y] [%~$(gitbranch)$(gitisclean)]
-└[%j]$(promptsign) '
-	PS2='    $(promptsign) ' 
+	PROMPT=$'
+┌[%n@%m] [/dev/%y] [%~$(gitbranch)$(gitisclean)] [%j] <3
+└[%h]> '
+	PS2=$' ~> ' 
 	RPROMPT='[%T]'
