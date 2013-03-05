@@ -54,7 +54,7 @@
 	function batperc {
 		if [[ $(hostname) == "lipstick" ]]; then
 			if [[ $(acpi | grep -i -c "Discharging") != "1" ]]; then
-				charge='⚡'
+				charge=⚡
 			else
 				charge=''
 			fi
