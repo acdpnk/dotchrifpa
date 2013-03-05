@@ -23,42 +23,37 @@
 # functions
 
 	function isgit {
-		echo $(git rev-parse --git-dir 2>&1 | grep -c fatal)
+		git branch &>/dev/null && echo 1 && return
+		echo 0
 	}
 
 	function gitisclean {
-		if [[ $(isgit) == "0" ]] && [[ $(git status 2>&1 | grep -c clean) == "0" ]]; then
+		if [[ $(isgit) == "1" ]] && [[ $(git status 2>&1 | grep -c clean) == "0" ]]; then
 			echo •
 		fi
 	}
 
 	function gitbranch {
-		if [[ $(isgit) == "0" ]]; then
+		if [[ $(isgit) == "1" ]]; then
 			echo -n ' on '
 			git rev-parse --abbrev-ref HEAD 2>/dev/null
 		fi
 	}
 
-	function activejobs {
-		if [ $(jobs | grep -c -i Running) != "0" ] || [ $(jobs | grep -c -i Stopped) != "0" ]; then
-			echo 1 
-		else
-			echo 0
-		fi	
-	}
-
-	function promptsign {
-		if [[ $(activejobs) == "1" ]]; then
-			echo ¥
-		else
-			echo $
+	function prompt_char {
+		if [[ $UID == 0 ]]; then
+			echo '#'
+			return
 		fi
+		git branch >/dev/null 2>/dev/null && echo '±' && return
+	#	hg root >/dev/null 2>/dev/null && echo '☿' && return
+		echo '$'
 	}
 
 # prompt
 
 	PROMPT=$'
 ┌[%n@%m] [%c$(gitbranch)$(gitisclean)]
-└[%h]> '
+└[%h]$(prompt_char) '
 	PS2=$' ~> ' 
 	RPROMPT=' [%j] [%T]'
