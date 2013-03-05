@@ -36,7 +36,6 @@
 	alias dte='date +%y%m%d%H%M%S'
 	alias la='ls -a'
 	alias getip='curl icanhazip.com'
-	alias j='autojump'
 
 # aliases for starting programs
 	alias cr='google-chrome &'
