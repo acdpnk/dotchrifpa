@@ -58,6 +58,9 @@
 			else
 				charge=''
 			fi
+			if [[ $(acpi | grep -i -c "warning") == "1" ]]; then
+				charge=%{$fg_bold[red]%}'!'%{$reset_color%}
+			fi
 			echo '['$(acpi | grep -E -o "1?[0-9]?[0-9]%" | sed s/"%"/"%%"/)$charge']'
 		fi
 	}
