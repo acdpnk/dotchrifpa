@@ -54,11 +54,11 @@
 	function batperc {
 		if [[ $(hostname) == "lipstick" ]]; then
 			if [[ $(acpi | grep -i -c "Discharging") != "1" ]]; then
-				charge='△'
+				charge='⚡'
 			else
-				charge='▽'
+				charge=''
 			fi
-			echo '['$(acpi | grep -E -o "[0-9]?[0-9]%" | sed s/"%"/""/)$charge']'
+			echo '['$(acpi | grep -E -o "[0-9]?[0-9]%" | sed s/"%"/"%%"/)$charge']'
 		fi
 	}
 
