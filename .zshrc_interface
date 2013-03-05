@@ -60,5 +60,5 @@
 	PROMPT=$'
 ┌[%n@%m] [/dev/%y] [%~$(gitbranch)$(gitisclean)] [%j] <3
 └[%h]> '
-	PS2=$' ~> ' 
+	PS2=$'~> ' 
 	RPROMPT='[%T]'
