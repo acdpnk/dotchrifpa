@@ -57,6 +57,7 @@
 
 # prompt
 
-	PROMPT='[%n@%m %c$(gitbranch)$(gitisclean)]$(promptsign) '
-	RPROMPT='[%j][%T]'
-
+	PROMPT=$'┌[%n@%m] [/dev/%y] [%~$(gitbranch)$(gitisclean)]
+└[%j]$(promptsign) '
+	PS2='    $(promptsign)' 
+	RPROMPT='[%T]'
