@@ -4,7 +4,7 @@
 #	alias midden='sshfs mrnda@[2001:6f8:900:f3d::2]:/home/mrnda/Midden /home/chrifpa/Midden'
 #	alias umidden='sudo umount /home/chrifpa/Midden'
 
-	alias bat='echo `date +%H:%M:%S` `acpi`'
+	alias bat='acpi | sed s/"Battery 0: "/""/g'
 
 	alias vnc='vncviewer &'
 

@@ -38,7 +38,7 @@
 		sources='/home/chrifpa/.dotfiles/'
 	fi
 
-# source files
+# source files (hostspecific last ist important!)
 	source $sources.zshrc_interface
 	source $sources.zshrc_aliases
 	source $sources.zshrc_$(hostname)

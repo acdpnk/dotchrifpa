@@ -50,10 +50,22 @@
 		echo '$'
 	}
 
+
+	function batperc {
+		if [[ $(hostname) == "lipstick" ]]; then
+			if [[ $(acpi | grep -i -c "Discharging") != "1" ]]; then
+				charge='^'
+			else
+				charge='v'
+			fi
+			echo '['$(acpi | grep -E -o "[0-9]?[0-9]%" | sed s/"%"/""/)$charge']'
+		fi
+	}
+
 # prompt
 
 	PROMPT=$'
-┌[%n@%m] [%c$(gitbranch)$(gitisclean)]
+┌[%n@%m][%c$(gitbranch)$(gitisclean)]
 └[%h]$(prompt_char) '
 	PS2=$' ~> ' 
-	RPROMPT=' [%j] [%T]'
+	RPROMPT='[%j]$(batperc)[%T]'
