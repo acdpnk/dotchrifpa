@@ -69,6 +69,6 @@
 
 	PROMPT=$'
 ┌[%n@%m][%c$(gitbranch)$(gitisclean)]
-└[%h]$(prompt_char)> '
+└[%j]$(prompt_char)> '
 	PS2=$' ~> ' 
-	RPROMPT='[%j][%T]$(batperc)'
+	RPROMPT='[%T]$(batperc)'
