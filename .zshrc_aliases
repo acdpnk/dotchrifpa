@@ -1,3 +1,9 @@
+# global aliases to mimic ios-shortcuts
+	alias -g kk='":*:*"'
+	alias -g jj='"\o/"'
+	alias -g hrt='"<3"'
+	alias -g shrg='"¯\_(ツ)_/¯"'
+
 # aliases for dropbox
 	alias drpstart='dropbox start'
 	alias drpstop='dropbox stop'
