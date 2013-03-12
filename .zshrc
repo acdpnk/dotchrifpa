@@ -30,13 +30,15 @@
 
 
 # determine path for sources by host
-	if [[ $(hostname) == "lipstick" ]]; then
-		sources='/home/chrifpa/.dotfiles/'
-	elif [[ $(hostname) == "igor" ]]; then
-		sources='/home/mrnda/.dotfiles/'
-	elif [[ $(hostname) == "cetus.uberspace.de" ]]; then
-		sources='/home/chrifpa/.dotfiles/'
-	fi
+	sources=/home/$(whoami)/.dotfiles/
+
+#	if [[ $(hostname) == "lipstick" ]]; then
+#		sources='/home/mrnda/.dotfiles/'
+#	elif [[ $(hostname) == "igor" ]]; then
+#		sources='/home/mrnda/.dotfiles/'
+#	elif [[ $(hostname) == "cetus.uberspace.de" ]]; then
+#		sources='/home/chrifpa/.dotfiles/'
+#	fi
 
 # source files (hostspecific last ist important!)
 	source $sources.zshrc_interface
