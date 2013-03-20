@@ -26,6 +26,8 @@
 	alias dte='date +%y%m%d%H%M%S'
 	alias la='ls -a'
 	alias getip='curl icanhazip.com'
+	alias clp='tr -d '\n' | xclip -selection clipboard'
+
 
 # aliases for starting programs
 	alias cr='google-chrome &'
