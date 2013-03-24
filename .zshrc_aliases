@@ -37,3 +37,19 @@
 	alias sub='sublime &'
 	alias py='python'
 	alias ea='sudo date > /dev/null ; sudo etherape &'
+
+# suffix-aliases
+	alias -s png='eog'
+	alias -s jpg='eog &'
+	alias -s jpeg='eog &'
+
+	alias -s html='google-chrome &'
+	alias -s htm='google-chrome &'
+
+	alias -s txt='sublime &'
+	alias -s c='sublime &'
+	alias -s java='sublime &'
+	alias -s cc='sublime &'
+
+	alias -s pdf='acroread &'
+
