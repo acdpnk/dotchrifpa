@@ -38,6 +38,7 @@
 	alias sub='sublime &'
 	alias py='python'
 	alias ea='sudo date > /dev/null ; sudo etherape &'
+	alias sc='custom-screencapture'
 
 # suffix-aliases
 	alias -s png='eog'
