@@ -11,3 +11,5 @@
 	alias igoron='igr -p'
 
 #	alias sshfsecho='sshfs root@[2001:6f8:900:f3d::2]:/ /home/chrifpa/echofs'
+
+	RPROMPT="<3"
