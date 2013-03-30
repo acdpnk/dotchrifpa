@@ -32,6 +32,10 @@
 	typeset -U path
 	path+=(/home/$(whoami)/.scrpt)
 
+
+# make vim the standard editor
+	export EDITOR=/usr/bin/vim
+	export VISUAL=/usr/bin/vim
 # determine path for sources by host
 	sources=/home/$(whoami)/.dotfiles/
 
