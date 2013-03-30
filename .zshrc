@@ -28,6 +28,9 @@
 	compinit
 # End of lines added by compinstall
 
+# add ~/.scrpt to PATH
+	typeset -U path
+	path+=(/home/$(whoami)/.scrpt)
 
 # determine path for sources by host
 	sources=/home/$(whoami)/.dotfiles/
