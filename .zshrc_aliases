@@ -35,23 +35,23 @@
 	alias fil='nautilus &'
 	alias emp='empathy &'
 	alias qti='qtiplot &'
-	alias sub='sublime-text-2 &'
+#	alias sub='sublime-text-2 &'
 	alias py='python'
 	alias ea='sudo date > /dev/null ; sudo etherape &'
 	alias sc='custom-screencapture'
 
 # suffix-aliases
-	alias -s png='eog'
-	alias -s jpg='eog &'
-	alias -s jpeg='eog &'
+	alias -s png='feh'
+	alias -s jpg='feh &'
+	alias -s jpeg='feh &'
 
-	alias -s html='google-chrome &'
-	alias -s htm='google-chrome &'
+	alias -s html='chromium-browser &'
+	alias -s htm='chromium-browser &'
 
-	alias -s txt='sublime &'
-	alias -s c='sublime &'
-	alias -s java='sublime &'
-	alias -s cc='sublime &'
+	alias -s txt='subl &'
+	alias -s c='subl &'
+	alias -s java='subl &'
+	alias -s cc='subl &'
 
-	alias -s pdf='acroread &'
+	#alias -s pdf='evince &'
 
