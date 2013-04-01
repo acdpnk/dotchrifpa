@@ -14,7 +14,7 @@
 	HISTFILE=~/.histfile
 	HISTSIZE=1000
 	SAVEHIST=1000
-	setopt appendhistory autocd nomatch correct_all share_history 
+	setopt appendhistory autocd nomatch share_history
 	bindkey -v
 
 	## case-insensitive tab completion for filenames
