@@ -2,8 +2,7 @@
 
 # thought of the day
 
-	thought_of_day
-	cat $HOME/.thought
+	fortune $HOME/.dotfiles/.fortunes
 
 	alias bat='acpi | sed s/"Battery 0: "/""/g'
 

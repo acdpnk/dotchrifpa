@@ -14,6 +14,7 @@
 
 # git
  	alias g='git'
+	alias gstat='git status'
 	alias gin='git init'
 	alias gadd='git add'
 	alias gcom='git commit -m'
@@ -27,7 +28,7 @@
 	alias dte='date +%y%m%d%H%M%S'
 	alias la='ls -a'
 	alias getip='curl icanhazip.com'
-	alias clp='tr -d '\n' | xclip -selection clipboard'
+#	alias clp='tr -d %\n | xclip -selection clipboard'
 
 
 # aliases for starting programs
@@ -53,5 +54,5 @@
 	alias -s java='subl &'
 	alias -s cc='subl &'
 
-	#alias -s pdf='evince &'
+	alias -s pdf='evince'
 
