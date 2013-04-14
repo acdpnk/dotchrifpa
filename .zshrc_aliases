@@ -5,7 +5,7 @@
 	alias -g shrg='"¯\_(ツ)_/¯"'
 
 # aliases for dropbox
-	alias dropbox='python /usr/bin/dropbox.py'
+#	alias dropbox='python /usr/bin/dropbox.py'
 	alias drpstart='dropbox start'
 	alias drpstop='dropbox stop'
 	alias drpstat='dropbox status'
