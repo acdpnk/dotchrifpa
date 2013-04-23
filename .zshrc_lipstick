@@ -11,4 +11,4 @@
 	alias igoron='igr -p'
 
 
-	RPROMPT="<3"
+	RPROMPT="%{$fg_bold[red]%}<3%{$reset_color%}"
