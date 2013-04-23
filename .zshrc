@@ -24,9 +24,8 @@
 # The following lines were added by compinstall
 	zstyle :compinstall filename '/home/chrifpa/.zshrc'
 
-	autoload -Uz compinit
-	compinit
-# End of lines added by compinstall
+	autoload -Uz compinit && compinit
+	autoload -Uz colors && colors
 
 # add ~/.scrpt to PATH
 	typeset -U path
