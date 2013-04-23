@@ -1,3 +1,7 @@
+# the temporary stuff
+	alias rmall='rm -r *.class simulatorcore/*.class simulationmodel/*.class'
+
+
 # global aliases to mimic ios-shortcuts
 	alias -g kk='":*:*"'
 	alias -g jj='"\o/"'
@@ -28,8 +32,8 @@
 	alias dte='date +%y%m%d%H%M%S'
 	alias la='ls -a'
 	alias getip='curl icanhazip.com'
-#	alias clp='tr -d %\n | xclip -selection clipboard'
-
+	alias clp='xclip -selection clipboard'
+	alias am='alsamixer'
 
 # aliases for starting programs
 	alias cr='google-chrome &'
