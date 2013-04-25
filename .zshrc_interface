@@ -23,7 +23,7 @@
 # functions
 
 	function activejobs {
-		if [[ $(jobs | grep -i -c "running" ) -ne 0 ]]; then
+		if [[ $(jobs | grep -i -c -e ".+" ) -ne 0 ]]; then
 			echo "!"
 		fi
 	}
