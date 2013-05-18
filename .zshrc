@@ -30,6 +30,7 @@
 # add ~/.scrpt to PATH
 	typeset -U path
 	path+=(/home/$(whoami)/.scrpt)
+	path+=(/home/$(whoami)/.py-scripts)
 
 
 # make vim the standard editor

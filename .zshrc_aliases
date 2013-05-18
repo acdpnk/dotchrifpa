@@ -1,5 +1,5 @@
 # the temporary stuff
-	alias rmall='rm -r *.class simulatorcore/*.class simulationmodel/*.class'
+	alias rmall='rm -r *.class simulatorcore/*.class simulationmodel/*.class gui/*.class'
 
 
 # global aliases to mimic ios-shortcuts
@@ -27,15 +27,16 @@
 	alias gpull='git pull'
 	alias gpush='git push'
 	alias gbr='git branch'
+
 # misc
 #	alias pip='sudo python-pip'
 	alias dte='date +%y%m%d%H%M%S'
 	alias la='ls -a'
 	alias getip='curl icanhazip.com'
 	alias clp='xclip -selection clipboard'
-	alias am='alsamixer'
 
 # aliases for starting programs
+	alias am='alsamixer'
 	alias cr='google-chrome &'
 	alias fil='nautilus &'
 	alias emp='empathy &'
@@ -44,6 +45,7 @@
 	alias py='python'
 	alias ea='sudo date > /dev/null ; sudo etherape &'
 	alias sc='custom-screencapture'
+#	alias arduino='arduino-1.0.4/arduino'
 
 # suffix-aliases
 	alias -s png='feh'
