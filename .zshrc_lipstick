@@ -1,8 +1,5 @@
 # lipstick-specific aliases and stuff
 
-# thought of the day
-
-#	fortune $HOME/.dotfiles/.fortunes
 	thought_of_day
 
 	alias bat='acpi | sed s/"Battery 0: "/""/g'
