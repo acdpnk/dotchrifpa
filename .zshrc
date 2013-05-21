@@ -37,7 +37,7 @@
 	export EDITOR=/usr/bin/vim
 	export VISUAL=/usr/bin/vim
 # determine path for sources by host
-	sources=/home/$(whoami)/.dotfiles/
+	sources=/home/$(whoami)/.dotfiles
 
 #	if [[ $(hostname) == "lipstick" ]]; then
 #		sources='/home/mrnda/.dotfiles/'
@@ -48,6 +48,8 @@
 #	fi
 
 # source files (hostspecific last ist important!)
-	source $sources.zshrc_interface
-	source $sources.zshrc_aliases
-	source $sources.zshrc_$(hostname)
+	source $sources/.zshrc_interface
+	source $sources/.zshrc_aliases
+	source $sources/.zshrc_$(hostname)
+	source $sources/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
+
