@@ -43,6 +43,7 @@
 	alias qti='qtiplot &'
 #	alias sub='sublime-text-2 &'
 	alias py='python'
+	alias bpy='bpython'
 	alias ea='sudo date > /dev/null ; sudo etherape &'
 	alias sc='custom-screencapture'
 #	alias arduino='arduino-1.0.4/arduino'
