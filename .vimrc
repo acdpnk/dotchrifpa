@@ -3,7 +3,7 @@ set term=color_xterm
 syntax on
 set softtabstop=4
 set shiftwidth=4
-set autoindent expandtab
+set cindent expandtab
 set number
 set ruler
 set hlsearch incsearch ignorecase smartcase
