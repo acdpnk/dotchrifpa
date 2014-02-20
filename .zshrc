@@ -93,6 +93,7 @@ bindkey "^[[1;9D" backward-word
 bindkey "^[[1;9C" forward-word
 bindkey "^[[3~" delete-char
 bindkey "^[[?" backward-kill-word
+bindkey "^H" kill-region
 
 
 ## smart urls
