@@ -1,0 +1,16 @@
+#!/usr/bin/zsh
+
+
+#RPROMPT="%{$fg_bold[red]%}<3%{$reset_color%}"
+
+echo "
+$fg_bold[white]$(thought_of_day)$reset_color"
+
+alias wp="wry post"
+alias -g pbc="pbcopy"
+alias -g pbp="pbpaste"
+alias o="open"
+alias caf="caffeinate &"
+alias decaf="pkill caffeinate"
+alias -g sag="say -v Anna"
+alias dockspacer='defaults write com.apple.dock persistent-apps -array-add ‘{“tile-type”=“spacer-tile”;}’'

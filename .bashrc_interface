@@ -34,7 +34,7 @@
 	}
 
 # prompt
-	PS1='[\u@\h \W$(gitbranch)$(gitisclean)]$(promptsign) '
+	PS1='[\u@\h \W$(gitbranch)$(gitisclean)][${?/^0$/}]$(promptsign) '
 
 
 # environmental stuff

@@ -34,14 +34,14 @@
 
 	function gitisclean {
 		if [[ $(isgit) == "1" ]] && [[ $(git status 2>&1 | grep -c clean) == "0" ]]; then
-			echo •
+			echo %{$fg_bold[white]%}•%{$reset_color%}
 		fi
 	}
 
 	function gitbranch {
 		if [[ $(isgit) == "1" ]]; then
 			echo -n ' on '
-			git rev-parse --abbrev-ref HEAD 2>/dev/null
+			echo %{$fg[cyan]%}$(git rev-parse --abbrev-ref HEAD 2>/dev/null)%{$reset_color%}
 		fi
 	}
 
@@ -57,23 +57,35 @@
 
 
 	function batperc {
-		if [[ $(hostname) == "lipstick" ]]; then
-			if [[ $(acpi | grep -i -c "Discharging") != "1" ]]; then
-				charge=⚡
+		if [[ $(hostname) == "sirius" ]]; then
+			if [[ $(pmset -g batt | grep -i -c "Discharging") != "1" ]]; then
+				charge='⚡ '
 			else
 				charge=''
 			fi
-			if [[ $(acpi | grep -i -c "warning") == "1" ]]; then
+			if [[ $(pmset -g batt | grep -i -c "warning") == "1" ]]; then
 				charge=%{$fg_bold[red]%}'!'%{$reset_color%}
 			fi
-			echo '['$(acpi | grep -E -o "1?[0-9]?[0-9]%" | sed s/"%"/"%%"/)$charge']'
+			echo '['$(pmset -g batt | grep -E -o "1?[0-9]?[0-9]%" | sed s/"%"/"%%"/)$charge']'
 		fi
 	}
 
+        function statuschar {
+                if [[ $last_status != 0 ]]; then
+                    echo %{$fg_bold[red]%}$last_status%{$reset_color%}
+                else
+                    echo $last_status
+                fi
+        }
+        function remember_status {
+            export last_status=$?
+        }
 # prompt
 
-	PROMPT=$'
-┌[%n@%m][%c$(gitbranch)$(gitisclean)]
-└[%?]$(activejobs)$(prompt_char)> '
+	PROMPT=$'$(remember_status)
+┌[%{$fg[magenta]%}%n%{$reset_color%}@%{$fg[yellow]%}%m%{$reset_color%}][%{$fg[green]%}%c%{$reset_color%}$(gitbranch)$(gitisclean)]
+└[%(?.%?.%{$fg_bold[red]%}%?%{$reset_color%})]$(activejobs)$(prompt_char)> '
 	PS2=$' ~> ' 
 	RPROMPT='[%T]$(batperc)'
+
+

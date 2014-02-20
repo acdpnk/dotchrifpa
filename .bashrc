@@ -7,6 +7,8 @@
 		sources='/home/mrnda/.dotfiles/'
 	elif [ $HOSTNAME == "cetus.uberspace.de" ]; then
 		sources='/home/chrifpa/.dotfiles/'
+        elif [ $HOSTNAME == "sirius" ]; then
+                sources='/Users/chrifpa/.dotfiles/'
 	fi
 
 # source global definitions
