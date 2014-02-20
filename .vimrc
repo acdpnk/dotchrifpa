@@ -1,4 +1,10 @@
 set nocompatible
+
+if (match(system("uname -s"), "FreeBSD") != -1)
+    set term=builtin_xterm
+else
+    set term=color_xterm
+endif
 set term=color_xterm
 syntax on
 set softtabstop=4
