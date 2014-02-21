@@ -1,14 +1,14 @@
 # .zshrc
 
-  chpwd() {
-    [[ -t 1 ]] || return
-    case $TERM in
-      sun-cmd) print -Pn "\e]l%~\e\\"
-        ;;
-      *xterm*|rxvt|(dt|k|E)term) print -Pn "\e]2;%~\a"
-        ;;
-    esac
-  }
+#  chpwd() {
+#    [[ -t 1 ]] || return
+#    case $TERM in
+#      sun-cmd) print -Pn "\e]l%~\e\\"
+#        ;;
+#      *xterm*|rxvt|(dt|k|E)term) print -Pn "\e]2;%~\a"
+#        ;;
+#    esac
+#  }
 
 
 # Lines configured by zsh-newuser-install
@@ -19,7 +19,7 @@
 	bindkey -e
 
 	## case-insensitive tab completion for filenames
-	zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'm:{a-zA-Z}={A-Za-z} l:|=* r:|=*' 'r:|[.,_-]=* r:|=*'
+        zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'm:{a-zA-Z}={A-Za-z} l:|=* r:|=*' 'r:|[.,_-]=* r:|=*'
 
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
@@ -128,7 +128,7 @@ zstyle ':completion:*:hosts' hosts $hosts
 
 # Use caching so that commands like apt and dpkg complete are useable
 zstyle ':completion::complete:*' use-cache 1
-zstyle ':completion::complete:*' cache-path ~/.oh-my-zsh/cache/
+zstyle ':completion::complete:*' cache-path ~/.dotfiles/zsh/cache/
 
 # Don't complete uninteresting users
 zstyle ':completion:*:*:*:users' ignored-patterns \

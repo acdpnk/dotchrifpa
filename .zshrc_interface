@@ -7,26 +7,9 @@
 	AUTO_CD=true
 	autoload -U colors && colors
 
-# i found this one and don't quite grasp it yet. when changing directories it checks whether the current terminal is an xterm window or *something* (?) similar, and if so prints current directory to the title bar.
-
-	chpwd() {
-		[[ -t 1 ]] || return
-		case $TERM in
-		sun-cmd) print -Pn "\e]l%~\e\\"
-		;;
-		*xterm*|rxvt|(dt|k|E)term) print -Pn "\e]2; [%n@%M]   [/dev/%y]   [$(pwd)] \a"
-		;;
-		esac
-		}
-	chpwd #calling it so that the title bar is as designed directly after logging in
 
 # functions
 
-	function activejobs {
-		if [[ $(jobs | grep -i -c -e ".+" ) -ne 0 ]]; then
-			echo "!"
-		fi
-	}
 	function isgit {
 		git branch &>/dev/null && echo 1 && return
 		echo 0
@@ -70,21 +53,13 @@
 		fi
 	}
 
-        function statuschar {
-                if [[ $last_status != 0 ]]; then
-                    echo %{$fg_bold[red]%}$last_status%{$reset_color%}
-                else
-                    echo $last_status
-                fi
-        }
-        function remember_status {
-            export last_status=$?
-        }
+
+
 # prompt
 
-	PROMPT=$'$(remember_status)
-┌[%{$fg[magenta]%}%n%{$reset_color%}@%{$fg[yellow]%}%m%{$reset_color%}][%{$fg[green]%}%c%{$reset_color%}$(gitbranch)$(gitisclean)]
-└[%(?.%?.%{$fg_bold[red]%}%?%{$reset_color%})]$(activejobs)$(prompt_char)> '
+	PROMPT='
+┌[%{$fg[magenta]%}%n%{$reset_color%}@%{$fg[yellow]%}%m%{$reset_color%}][%{$fg[green]%}%c%{$reset_color%}$(gitbranch)$(gitisclean)]%1(j.[%j].)
+└[%(?.%?.%{$fg_bold[red]%}%?%{$reset_color%})]%1(j.!.)$(prompt_char)> '
 	PS2=$' ~> ' 
 	RPROMPT='[%T]$(batperc)'
 
