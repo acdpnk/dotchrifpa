@@ -13,9 +13,9 @@ set number
 set ruler
 set hlsearch incsearch ignorecase smartcase
 set mouse=a
-set wildmenu
-set wildmode=list:longest
 imap ii <C-[>
 set scrolloff=5
 set sidescrolloff=5
 set backspace=indent,eol,start 
+set wildmode=longest,list,full
+set wildmenu
