@@ -18,3 +18,4 @@ set wildmode=list:longest
 imap ii <C-[>
 set scrolloff=5
 set sidescrolloff=5
+set backspace=indent,eol,start 
