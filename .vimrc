@@ -1,3 +1,6 @@
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+execute pathogen#infect()
+
 set nocompatible
 
 if (match(system("uname -s"), "FreeBSD") != -1)
@@ -17,5 +20,9 @@ imap ii <C-[>
 set scrolloff=5
 set sidescrolloff=5
 set backspace=indent,eol,start 
+
 set wildmode=longest,list,full
 set wildmenu
+
+let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$']
+map <Leader>n :NERDTreeToggle<CR>
