@@ -23,7 +23,7 @@
 
 	function gitbranch {
 		if [[ $(isgit) == "1" ]]; then
-			echo -n ' on '
+			echo -n ':'
 			echo %{$fg[cyan]%}$(git rev-parse --abbrev-ref HEAD 2>/dev/null)%{$reset_color%}
 		fi
 	}
