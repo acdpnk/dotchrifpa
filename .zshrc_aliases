@@ -9,11 +9,11 @@
 
 # aliases for dropbox
 #	alias dropbox='python /usr/bin/dropbox.py'
-	alias drpstart='dropbox start'
-	alias drpstop='dropbox stop'
-	alias drpstat='dropbox status'
-	alias drpmon='PRVSTAT=" "; while true; do STAT="`dropbox status`"; if [ "$PRVSTAT" !=  "$STAT" ]; then echo `date +%H:%M:%S` --  $STAT; fi; PRVSTAT="$STAT"; sleep 1s; done'
-	alias drpstm='dropbox start; drpmon'
+#	alias drpstart='dropbox start'
+#	alias drpstop='dropbox stop'
+#	alias drpstat='dropbox status'
+#	alias drpmon='PRVSTAT=" "; while true; do STAT="`dropbox status`"; if [ "$PRVSTAT" !=  "$STAT" ]; then echo `date +%H:%M:%S` --  $STAT; fi; PRVSTAT="$STAT"; sleep 1s; done'
+#	alias drpstm='dropbox start; drpmon'
 
 # git
  	alias g='git'
@@ -31,34 +31,36 @@
 #	alias pip='sudo python-pip'
 	alias dte='date +%y%m%d%H%M%S'
 	alias la='ls -a'
+        alias ll='ls -l'
 	alias getip='curl icanhazip.com'
-	alias clp='xclip -selection clipboard'
+#	alias clp='xclip -selection clipboard'
         alias vi='vim' #d'oh
 # aliases for starting programs
-	alias am='alsamixer'
-	alias cr='google-chrome &'
-	alias fil='nautilus &'
-	alias emp='empathy &'
-	alias qti='qtiplot &'
+#	alias am='alsamixer'
+#	alias cr='google-chrome &'
+#	alias fil='nautilus &'
+#	alias emp='empathy &'
+#	alias qti='qtiplot &'
 #	alias sub='sublime-text-2 &'
 	alias py='python'
 	alias bpy='bpython'
-	alias ea='sudo date > /dev/null ; sudo etherape &'
-	alias sc='custom-screencapture'
+        alias ipy='ipython'
+#       alias ea='sudo date > /dev/null ; sudo etherape &'
+#	alias sc='custom-screencapture'
 #	alias arduino='arduino-1.0.4/arduino'
 
 # suffix-aliases
-	alias -s png='feh'
-	alias -s jpg='feh &'
-	alias -s jpeg='feh &'
+#	alias -s png='feh'
+#	alias -s jpg='feh &'
+#	alias -s jpeg='feh &'
 
-	alias -s html='chromium-browser &'
-	alias -s htm='chromium-browser &'
+#	alias -s html='chromium-browser &'
+#	alias -s htm='chromium-browser &'
 
-	alias -s txt='subl &'
-	alias -s c='subl &'
-	alias -s java='subl &'
-	alias -s cc='subl &'
+#	alias -s txt='subl &'
+#	alias -s c='subl &'
+#	alias -s java='subl &'
+#	alias -s cc='subl &'
 
-	alias -s pdf='evince'
+#	alias -s pdf='evince'
 
