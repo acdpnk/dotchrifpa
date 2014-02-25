@@ -4,7 +4,7 @@ execute pathogen#infect()
 set nocompatible
 
 if (match(system("uname -s"), "Darwin") != -1)
-    set term=color_xterm
+    "set term=color_xterm
     map <D-S-]> gt
     map <D-S-[> gT
 else
@@ -41,6 +41,13 @@ if has("autocmd")
 endif
 
 map <leader>, :tabedit $MYVIMRC<CR>
+
+"set cc=80
+
+highlight OverLength ctermbg=darkyellow ctermfg=white guibg=#592929
+match OverLength /\%81v.\+/
+
+"match ErrorMsg '\%>80v.\+'
 
 "inoremap { {}<Esc>i
 "inoremap [ []<Esc>i
