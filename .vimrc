@@ -5,8 +5,12 @@ set nocompatible
 
 if (match(system("uname -s"), "Darwin") != -1)
     set term=color_xterm
+    map <D-S-]> gt
+    map <D-S-[> gT
 else
     set term=builtin_xterm
+    map <C-S-]> gt
+    map <C-S-[> gT
 endif
 syntax on
 set encoding=utf-8
@@ -35,6 +39,8 @@ let g:syntastic_auto_loc_list = 1
 if has("autocmd")
     autocmd bufwritepost .vimrc source $MYVIMRC
 endif
+
+map <leader>, :tabedit $MYVIMRC<CR>
 
 "inoremap { {}<Esc>i
 "inoremap [ []<Esc>i
