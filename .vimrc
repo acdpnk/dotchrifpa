@@ -3,10 +3,10 @@ execute pathogen#infect()
 
 set nocompatible
 
-if (match(system("uname -s"), "FreeBSD") != -1)
-    set term=builtin_xterm
-else
+if (match(system("uname -s"), "Darwin") != -1)
     set term=color_xterm
+else
+    set term=builtin_xterm
 endif
 syntax on
 set encoding=utf-8
