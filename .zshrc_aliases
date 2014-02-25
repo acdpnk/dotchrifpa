@@ -34,7 +34,7 @@
         alias ll='ls -l'
 	alias getip='curl icanhazip.com'
 #	alias clp='xclip -selection clipboard'
-        alias vi='vim' #d'oh
+        alias -g vi='vim' #d'oh
 # aliases for starting programs
 #	alias am='alsamixer'
 #	alias cr='google-chrome &'

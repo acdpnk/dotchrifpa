@@ -9,6 +9,7 @@ else
     set term=color_xterm
 endif
 syntax on
+set encoding=utf-8
 set softtabstop=4
 set shiftwidth=4
 set cindent expandtab
