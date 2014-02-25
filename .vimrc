@@ -1,5 +1,7 @@
 runtime bundle/vim-pathogen/autoload/pathogen.vim
+filetype plugin on
 execute pathogen#infect()
+
 
 set nocompatible
 
