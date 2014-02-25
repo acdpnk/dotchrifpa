@@ -119,8 +119,8 @@ setopt long_list_jobs
 
 ## pager
 export PAGER=less
+export LANG=en_US.utf-8
 export LC_CTYPE=$LANG
-
 
 # use /etc/hosts and known_hosts for hostname completion
 [ -r /etc/ssh/ssh_known_hosts ] && _global_ssh_hosts=(${${${${(f)"$(</etc/ssh/ssh_known_hosts)"}:#[\|]*}%%\ *}%%,*}) || _ssh_hosts=()
