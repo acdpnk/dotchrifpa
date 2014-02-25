@@ -12,7 +12,12 @@ else
     map <C-S-]> gt
     map <C-S-[> gT
 endif
-syntax on
+
+syntax enable
+set background=dark
+colorscheme solarized
+call togglebg#map("<leader>l")
+
 set encoding=utf-8
 set softtabstop=4
 set shiftwidth=4
@@ -44,7 +49,7 @@ map <leader>, :tabedit $MYVIMRC<CR>
 
 "set cc=80
 
-highlight OverLength ctermbg=darkyellow ctermfg=white guibg=#592929
+highlight OverLength ctermbg=yellow ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
 
 "match ErrorMsg '\%>80v.\+'
