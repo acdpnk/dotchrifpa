@@ -28,6 +28,10 @@ set wildmenu
 let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$']
 map <Leader>n :NERDTreeToggle<CR>
 
+let g:syntastic_check_on_open = 1
+let g:syntastic_aggregate_errors = 1
+let g:syntastic_auto_loc_list = 1
+
 "inoremap { {}<Esc>i
 "inoremap [ []<Esc>i
 "inoremap < <><Esc>i
