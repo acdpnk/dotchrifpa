@@ -8,7 +8,7 @@ if (match(system("uname -s"), "Darwin") != -1)
     map <D-S-]> gt
     map <D-S-[> gT
 else
-    set term=builtin_xterm
+    "set term=builtin_xterm
     map <C-S-]> gt
     map <C-S-[> gT
 endif
