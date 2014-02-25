@@ -2,7 +2,6 @@ runtime bundle/vim-pathogen/autoload/pathogen.vim
 filetype plugin on
 execute pathogen#infect()
 
-
 set nocompatible
 
 if (match(system("uname -s"), "Darwin") != -1)
@@ -29,3 +28,8 @@ set wildmenu
 
 let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$']
 map <Leader>n :NERDTreeToggle<CR>
+
+inoremap { {}<Esc>i
+inoremap [ []<Esc>i
+inoremap < <><Esc>i
+inoremap ( ()<Esc>i
