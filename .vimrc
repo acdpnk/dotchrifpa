@@ -29,7 +29,7 @@ set backspace=indent,eol,start
 set wildmode=longest,list,full
 set wildmenu
 
-let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$']
+let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$', '.beam$', '.class$']
 map <Leader>n :NERDTreeToggle<CR>
 
 let g:syntastic_check_on_open = 1
