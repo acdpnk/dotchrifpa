@@ -32,6 +32,10 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_aggregate_errors = 1
 let g:syntastic_auto_loc_list = 1
 
+if has("autocmd")
+    autocmd bufwritepost .vimrc source $MYVIMRC
+endif
+
 "inoremap { {}<Esc>i
 "inoremap [ []<Esc>i
 "inoremap < <><Esc>i
