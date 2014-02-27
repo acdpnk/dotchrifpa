@@ -35,6 +35,8 @@
 	alias getip='curl icanhazip.com'
 #	alias clp='xclip -selection clipboard'
         alias -g vi='vim' #d'oh
+        alias flip=$HOME/.dotfiles/flip.py
+        alias gtfo=$HOME/.dotfiles/gtfo.zsh
 # aliases for starting programs
 #	alias am='alsamixer'
 #	alias cr='google-chrome &'
