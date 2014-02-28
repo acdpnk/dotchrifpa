@@ -47,9 +47,11 @@ endif
 
 map <leader>, :tabedit $MYVIMRC<CR>
 
-"set cc=80
+set cc=80
 
-highlight OverLength ctermbg=yellow ctermfg=white guibg=#592929
+"ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+
+highlight OverLength ctermbg=black ctermfg=darkgray guibg=#592929
 match OverLength /\%81v.\+/
 
 "match ErrorMsg '\%>80v.\+'
