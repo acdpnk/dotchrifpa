@@ -51,7 +51,7 @@ set cc=80
 
 "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
 
-highlight OverLength ctermbg=black ctermfg=darkgray guibg=#592929
+highlight OverLength ctermbg=black ctermfg=darkcyan guibg=#592929
 match OverLength /\%81v.\+/
 
 "match ErrorMsg '\%>80v.\+'
