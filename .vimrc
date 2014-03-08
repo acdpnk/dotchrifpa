@@ -1,5 +1,5 @@
 runtime bundle/vim-pathogen/autoload/pathogen.vim
-filetype plugin on
+filetype plugin indent on
 execute pathogen#infect()
 set nocompatible
 
@@ -24,12 +24,16 @@ set shiftwidth=4
 set cindent expandtab
 set number
 set ruler
+
 set hlsearch incsearch ignorecase smartcase
+" Map Ctrl+l to clear highlighted searches
+nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
+
 set mouse=a
 imap ii <C-[>
 set scrolloff=5
 set sidescrolloff=5
-set backspace=indent,eol,start 
+set backspace=indent,eol,start
 
 set wildmode=longest,list,full
 set wildmenu
@@ -47,18 +51,26 @@ endif
 
 map <leader>, :tabedit $MYVIMRC<CR>
 
+" highlight trailing whitespace and hard tabs
+"set list listchars=tab:»·,trail:·
+
+
 set cc=80
+
+" Highlight characters behind the 80 chars margin
+":au BufWinEnter * let w:m2=matchadd('ColumnMargin', '\%>80v.\+', -1)
 
 "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
 
 highlight OverLength ctermbg=black ctermfg=darkcyan guibg=#592929
 match OverLength /\%81v.\+/
 
-"match ErrorMsg '\%>80v.\+'
 
-"inoremap { {}<Esc>i
-"inoremap [ []<Esc>i
-"inoremap < <><Esc>i
-"inoremap ( ()<Esc>i
-"inoremap " ""<Esc>i
-"inoremap ' ''<Esc>i
+" Strip trailing whitespaces on each save
+fun! <SID>StripTrailingWhitespaces()
+    let l = line(".")
+    let c = col(".")
+    %s/\s\+$//e
+    call cursor(l, c)
+endfun
+autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
