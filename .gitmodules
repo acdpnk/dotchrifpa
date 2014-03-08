@@ -4,9 +4,6 @@
 [submodule "zsh-history-substring-search"]
 	path = zsh-history-substring-search
 	url = git@github.com:zsh-users/zsh-history-substring-search.git
-[submodule ".vim/bundle/vimerl"]
-	path = .vim/bundle/vimerl
-	url = https://github.com/oscarh/vimerl.git
 [submodule ".vim/bundle/supertab"]
 	path = .vim/bundle/supertab
 	url = https://github.com/ervandew/supertab.git
