@@ -1,0 +1,2 @@
+
+alias upd='sudo portsnap fetch update && sudo portmaster -a'
