@@ -45,7 +45,7 @@
         	path+=(/Users/$(whoami)/.scrpt)
        		path+=(/Users/$(whoami)/.py-scripts)
 		path+=(/usr/local/sbin)
-	else		
+	else
 		path+=(/home/$(whoami)/.scrpt)
 		path+=(/home/$(whoami)/.py-scripts)
 	fi
@@ -71,6 +71,7 @@
 # source files (hostspecific last ist important!)
 	source $sources/.zshrc_interface
 	source $sources/.zshrc_aliases
+	source $sources/git-flow-completion.zsh
 	source $sources/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
 	source $sources/zsh-history-substring-search/zsh-history-substring-search.plugin.zsh
 	source $sources/.zshrc_$(hostname)
