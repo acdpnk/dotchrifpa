@@ -51,6 +51,7 @@ endif
 
 map <leader>, :tabedit $MYVIMRC<CR>
 
+map <leader>w :w<CR>
 " highlight trailing whitespace and hard tabs
 "set list listchars=tab:»·,trail:·
 
