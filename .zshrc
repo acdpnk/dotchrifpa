@@ -44,7 +44,6 @@
 	if [[ $(hostname) == sirius* ]]; then
         	path+=(/Users/$(whoami)/.scrpt)
        		path+=(/Users/$(whoami)/.py-scripts)
-		path+=(/usr/local/sbin)
 	else
 		path+=(/home/$(whoami)/.scrpt)
 		path+=(/home/$(whoami)/.py-scripts)
@@ -73,6 +72,7 @@
 	source $sources/.zshrc_aliases
 	source $sources/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
 	source $sources/zsh-history-substring-search/zsh-history-substring-search.plugin.zsh
+        source $sources/git-flow-completion/git-flow-completion.zsh
 	source $sources/.zshrc_$(hostname)
 
 # bind UP and DOWN arrow keys
@@ -105,7 +105,8 @@ bindkey "^[[1;9C" forward-word
 bindkey "^[[3~" delete-char
 bindkey "^[[?" backward-kill-word
 bindkey "^H" kill-region
-
+bindkey "^[[1;2D" beginning-of-line
+bindkey "^[[1;2C" end-of-line
 
 ## smart urls
 autoload -U url-quote-magic

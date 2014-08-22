@@ -14,10 +14,12 @@ alias caf="caffeinate &"
 alias decaf="pkill caffeinate"
 alias -g sag="say -v Anna"
 alias dockspacer='defaults write com.apple.dock persistent-apps -array-add "{tile-data={}; tile-type="spacer-tile";}"'
-alias upd='brew update && brew upgrade --all && brew cleanup && gem update'
+alias upd='brew update && brew upgrade --all && brew cleanup && gem update && npm update -g'
 
 alias led1='maclight keyboard toggle -c 1'
 alias led0='maclight keyboard toggle -c 0'
+
+alias slog='$HOME/.scrpt/slogger/slogger -s'
 
 function renifty (){
     sudo kextunload '/System/Library/Extensions/AppleStorageDrivers.kext/Contents/PlugIns/AppleUSBCardReader.kext' && sudo kextload '/System/Library/Extensions/AppleStorageDrivers.kext/Contents/PlugIns/AppleUSBCardReader.kext'
@@ -25,3 +27,4 @@ return
 }
 
 fpath=(/usr/local/share/zsh-completions $fpath)
+

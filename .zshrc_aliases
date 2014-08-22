@@ -26,7 +26,7 @@
 	alias gpull='git pull'
 	alias gpush='git push'
 	alias gbr='git branch'
-
+        alias gist='gist -c'
 # misc
 #	alias pip='sudo python-pip'
 	alias dte='date +%y%m%d%H%M%S'
