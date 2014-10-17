@@ -26,7 +26,15 @@
 	alias gpull='git pull'
 	alias gpush='git push'
 	alias gbr='git branch'
+        alias gist='gist -c'
 
+# git flow
+
+        alias gf='git-flow'
+        alias gfin='gfin.rb'
+        alias gfeat='gfeat.rb'
+        alias gfix='gfix.rb'
+        alias grel='grel.rb'
 # misc
 #	alias pip='sudo python-pip'
 	alias dte='date +%y%m%d%H%M%S'
