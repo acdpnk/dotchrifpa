@@ -34,7 +34,7 @@
 
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
-	zstyle :compinstall filename '/home/chrifpa/.zshrc'
+
 
 	autoload -Uz compinit && compinit
 	autoload -Uz colors && colors
@@ -120,7 +120,7 @@ setopt long_list_jobs
 
 ## pager
 export PAGER=less
-#export LANG=en_US.UTF-8
+export LANG=en_US.UTF-8
 export LC_CTYPE=$LANG
 #export LC_ALL=$LANG
 
