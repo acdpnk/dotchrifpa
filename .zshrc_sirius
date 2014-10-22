@@ -28,3 +28,4 @@ return
 
 fpath=(/usr/local/share/zsh-completions $fpath)
 
+alias pupgrade="python3 ~/.dotfiles/pip_upgrade.py"
