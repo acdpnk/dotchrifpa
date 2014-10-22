@@ -16,7 +16,7 @@
 #	alias drpstm='dropbox start; drpmon'
 
 # git
- 	alias g='git'
+ 	alias g='hub'
 	alias gstat='git status'
 	alias gin='git init'
 	alias gadd='git add'
