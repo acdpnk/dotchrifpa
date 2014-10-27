@@ -14,7 +14,7 @@ alias caf="caffeinate &"
 alias decaf="pkill caffeinate"
 alias -g sag="say -v Anna"
 alias dockspacer='defaults write com.apple.dock persistent-apps -array-add "{tile-data={}; tile-type="spacer-tile";}"'
-alias upd='brew update && brew upgrade --all && brew cleanup && gem update && npm update -g'
+alias upd='brew update && brew upgrade --all && brew cleanup && gem update && pupgrade'
 
 alias led1='maclight keyboard toggle -c 1'
 alias led0='maclight keyboard toggle -c 0'
