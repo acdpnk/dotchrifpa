@@ -13,6 +13,10 @@ else
     map <C-S-[> gT
 endif
 
+map <Leader>t :tabedit<CR>
+map <Leader>d gt
+map <Leader>s gT
+
 syntax enable
 set background=dark
 colorscheme solarized
@@ -41,9 +45,9 @@ set wildmenu
 let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$', '.beam$', '.class$']
 map <Leader>n :NERDTreeToggle<CR>
 
-let g:syntastic_check_on_open = 1
-let g:syntastic_aggregate_errors = 1
-let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 1
+"let g:syntastic_aggregate_errors = 1
+"let g:syntastic_auto_loc_list = 1
 
 if has("autocmd")
     autocmd bufwritepost .vimrc source $MYVIMRC
@@ -51,9 +55,10 @@ endif
 
 map <leader>, :tabedit $MYVIMRC<CR>
 
+map <leader>q :wq<CR>
 map <leader>w :w<CR>
 " highlight trailing whitespace and hard tabs
-"set list listchars=tab:»·,trail:·
+set list listchars=tab:»·,trail:·
 
 
 set cc=80
@@ -75,3 +80,11 @@ fun! <SID>StripTrailingWhitespaces()
     call cursor(l, c)
 endfun
 autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
+
+set splitbelow
+set splitright
+
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>

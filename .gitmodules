@@ -40,3 +40,6 @@
 [submodule "git-flow-completion"]
 	path = git-flow-completion
 	url = https://github.com/bobthecow/git-flow-completion.git
+[submodule ".vim/bundle/ex-visincr"]
+	path = .vim/bundle/ex-visincr
+	url = https://github.com/exvim/ex-visincr
