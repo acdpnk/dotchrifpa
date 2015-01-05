@@ -31,7 +31,7 @@ set ruler
 
 set hlsearch incsearch ignorecase smartcase
 " Map Ctrl+l to clear highlighted searches
-nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
+nnoremap <silent> <leader>k :<C-u>nohlsearch<CR><C-l>
 
 set mouse=a
 imap ii <C-[>
