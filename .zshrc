@@ -155,3 +155,4 @@ zstyle ':completion:*:*:*:users' ignored-patterns \
 
 # ... unless we really want to.
 zstyle '*' single-ignored show
+function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}

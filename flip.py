@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 from sys import argv
+from sys import stdout
 
 flipTable = {
     "a" : u'\u0250',
@@ -92,5 +93,6 @@ for char in before:
 
         after = unicode(char + after)
 
-        
+
 print(after.encode("utf-8", "replace"))
+stdout.write(after.encode("utf-8", "replace"))
