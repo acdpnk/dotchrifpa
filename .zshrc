@@ -156,3 +156,6 @@ zstyle ':completion:*:*:*:users' ignored-patterns \
 # ... unless we really want to.
 zstyle '*' single-ignored show
 function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
+
+# added by travis gem
+[ -f /Users/chrifpa/.travis/travis.sh ] && source /Users/chrifpa/.travis/travis.sh

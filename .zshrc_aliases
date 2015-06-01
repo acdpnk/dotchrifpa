@@ -36,6 +36,8 @@
         alias gfix='gfix.rb'
         alias grel='grel.rb'
 # misc
+        #alias doch='$(sudo $(fc -ln -1))'
+        #alias fuck='echo sudo $(fc -ln -1); $(sudo $(fc -ln -1))'
 #	alias pip='sudo python-pip'
 	alias dte='date +%y%m%d%H%M%S'
 	alias la='ls -a'
