@@ -14,7 +14,9 @@ alias caf="caffeinate &"
 alias decaf="pkill caffeinate"
 alias -g sag="say -v Anna"
 alias dockspacer='defaults write com.apple.dock persistent-apps -array-add "{tile-data={}; tile-type="spacer-tile";}"'
-alias upd='brew update && brew upgrade --all && brew cleanup && gem update && pupgrade'
+alias upd='brew update && brew upgrade --all && brew cleanup && gem update && gem cleanup && pupgrade'
+
+alias xcplugin-update='find ~/Library/Application\ Support/Developer/Shared/Xcode/Plug-ins -name Info.plist -maxdepth 3 | xargs -I{} defaults write {} DVTPlugInCompatibilityUUIDs -array-add `defaults read /Applications/Xcode.app/Contents/Info DVTPlugInCompatibilityUUID`'
 
 alias led1='maclight keyboard toggle -c 1'
 alias led0='maclight keyboard toggle -c 0'
@@ -22,6 +24,9 @@ alias led0='maclight keyboard toggle -c 0'
 alias slog='$HOME/.scrpt/slogger/slogger -s'
 
 alias dc='doing now -s cluster'
+
+alias fl='fastlane'
+alias cart='carthage'
 
 function renifty (){
     sudo kextunload '/System/Library/Extensions/AppleStorageDrivers.kext/Contents/PlugIns/AppleUSBCardReader.kext' && sudo kextload '/System/Library/Extensions/AppleStorageDrivers.kext/Contents/PlugIns/AppleUSBCardReader.kext'
