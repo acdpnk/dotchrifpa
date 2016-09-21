@@ -19,7 +19,7 @@ map <Leader>s gT
 
 syntax enable
 set background=dark
-colorscheme solarized
+"colorscheme solarized
 call togglebg#map("<leader>l")
 
 set encoding=utf-8

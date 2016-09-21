@@ -6,7 +6,7 @@
 
 	AUTO_CD=true
 	autoload -U colors && colors
-
+	export VIRTUAL_ENV_DISABLE_PROMPT=yes
 
 # functions
 
@@ -26,6 +26,12 @@
 			echo -n ':'
 			echo %{$fg[cyan]%}$(git rev-parse --abbrev-ref HEAD 2>/dev/null)%{$reset_color%}
 		fi
+	}
+
+	function virtualenv_name {
+	    if [[ -n $VIRTUAL_ENV ]]; then
+	        echo \[$fg[blue]%}py%{$reset_color%}:%{$fg[blue]%}${VIRTUAL_ENV##*/}%{$reset_color%}\]
+	    fi
 	}
 
 	function prompt_char {
@@ -58,7 +64,7 @@
 # prompt
 
 	PROMPT='
-┌[%{$fg[magenta]%}%n%{$reset_color%}@%{$fg[yellow]%}%m%{$reset_color%}][%{$fg[green]%}%c%{$reset_color%}$(gitbranch)$(gitisclean)]%1(j.[%j].)
+┌[%{$fg[magenta]%}%n%{$reset_color%}@%{$fg[yellow]%}%m%{$reset_color%}][%{$fg[green]%}%c%{$reset_color%}$(gitbranch)$(gitisclean)]$(virtualenv_name)%1(j.[%j].)
 └[%(?.%?.%{$fg_bold[red]%}%?%{$reset_color%})]%1(j.!.)$(prompt_char)> '
 	PS2=$' ~> ' 
 	RPROMPT='[%T]$(batperc)'

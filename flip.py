@@ -94,5 +94,5 @@ for char in before:
         after = unicode(char + after)
 
 
-print(after.encode("utf-8", "replace"))
+#print(after.encode("utf-8", "replace"))
 stdout.write(after.encode("utf-8", "replace"))

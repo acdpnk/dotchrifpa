@@ -2,10 +2,10 @@
 
 
 # global aliases to mimic ios-shortcuts
-	alias -g kk='":*:*"'
-	alias -g jj='"\o/"'
-	alias -g hrt='"<3"'
-	alias -g shrg='"¯\_(ツ)_/¯"'
+	#alias -g kk='":*:*"'
+	#alias -g jj='"\o/"'
+	#alias -g hrt='"<3"'
+	#alias -g shrg='"¯\_(ツ)_/¯"'
 
 # aliases for dropbox
 #	alias dropbox='python /usr/bin/dropbox.py'
@@ -21,12 +21,18 @@
 	alias gin='git init'
 	alias gadd='git add'
 	alias gcom='git commit -m'
+        alias gac='git add . && git commit -m'
 	alias gco='git checkout'
 	alias gcb='git checkout -b'
 	alias gpull='git pull'
+        alias gpr='git pull --rebase'
+        alias gr='git rebase -i'
 	alias gpush='git push'
 	alias gbr='git branch'
-        alias gist='gist -c'
+        alias gist='gist'
+        alias ge='git exec'
+        alias gt='git tag'
+        alias gpt='git push --tags'
 
 # git flow
 
@@ -61,6 +67,14 @@
 #	alias sc='custom-screencapture'
 #	alias arduino='arduino-1.0.4/arduino'
 
+# Python virtualenvs
+    alias mkv='mkvirtualenv'
+    alias rmv='rmvirtualenv'
+    alias d='deactivate'
+    alias wo='workon'
+    alias lv='lsvirtualenv'
+
+    alias venv='venv.sh'
 # suffix-aliases
 #	alias -s png='feh'
 #	alias -s jpg='feh &'

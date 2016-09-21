@@ -15,7 +15,8 @@
 	HISTFILE=~/.histfile
 	HISTSIZE=15000
 	SAVEHIST=15000
-	setopt appendhistory autocd nomatch share_history
+	setopt appendhistory autocd nomatch
+        setopt hist_ignore_dups share_history inc_append_history extended_history
 	bindkey -e
 
 	## case-insensitive tab completion for filenames
@@ -70,6 +71,7 @@
 # source files (hostspecific last ist important!)
 	source $sources/.zshrc_interface
 	source $sources/.zshrc_aliases
+    source $sources/.zshrc_functions
 	source $sources/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
 	source $sources/zsh-history-substring-search/zsh-history-substring-search.plugin.zsh
         source $sources/git-flow-completion/git-flow-completion.zsh
@@ -157,5 +159,10 @@ zstyle ':completion:*:*:*:users' ignored-patterns \
 zstyle '*' single-ignored show
 function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
 
+# autojump
+[[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
+
 # added by travis gem
 [ -f /Users/chrifpa/.travis/travis.sh ] && source /Users/chrifpa/.travis/travis.sh
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"

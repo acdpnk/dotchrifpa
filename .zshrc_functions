@@ -1,0 +1,3 @@
+function venv() {
+    workon $1 || mkvirtualenv $1
+}

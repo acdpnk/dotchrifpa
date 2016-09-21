@@ -6,24 +6,21 @@
 #echo "
 #$fg_bold[white]$(thought_of_day)$reset_color"
 
-alias wp="wry post"
+alias cc="pbpaste | pbcopy"
+
 alias -g pbc="pbcopy"
 alias -g pbp="pbpaste"
 alias o="open"
-alias caf="caffeinate &"
-alias decaf="pkill caffeinate"
-alias -g sag="say -v Anna"
-alias dockspacer='defaults write com.apple.dock persistent-apps -array-add "{tile-data={}; tile-type="spacer-tile";}"'
-alias upd='brew update && brew upgrade --all && brew cleanup && gem update && gem cleanup && pupgrade'
+alias upd='brew update && brew upgrade --all && brew cleanup && gem update --system && gem update && gem cleanup && pupgrade && npm upgrade -g --loglevel=info'
 
-alias xcplugin-update='find ~/Library/Application\ Support/Developer/Shared/Xcode/Plug-ins -name Info.plist -maxdepth 3 | xargs -I{} defaults write {} DVTPlugInCompatibilityUUIDs -array-add `defaults read /Applications/Xcode.app/Contents/Info DVTPlugInCompatibilityUUID`'
+#alias xcplugin-update='find ~/Library/Application\ Support/Developer/Shared/Xcode/Plug-ins -name Info.plist -maxdepth 3 | xargs -I{} defaults write {} DVTPlugInCompatibilityUUIDs -array-add `defaults read /Applications/Xcode.app/Contents/Info DVTPlugInCompatibilityUUID`'
+#alias xcbplugin-update='find ~/Library/Application\ Support/Developer/Shared/Xcode/Plug-ins -name Info.plist -maxdepth 3 | xargs -I{} defaults write {} DVTPlugInCompatibilityUUIDs -array-add `defaults read /Applications/Xcode-beta.app/Contents/Info DVTPlugInCompatibilityUUID`'
 
-alias led1='maclight keyboard toggle -c 1'
-alias led0='maclight keyboard toggle -c 0'
+alias led1='maclight keyboard set -a 1'
+alias led0='maclight keyboard set -a 0'
 
 alias slog='$HOME/.scrpt/slogger/slogger -s'
 
-alias dc='doing now -s cluster'
 
 alias fl='fastlane'
 alias cart='carthage'
@@ -36,3 +33,13 @@ return
 fpath=(/usr/local/share/zsh-completions $fpath)
 
 alias pupgrade="python3 ~/.dotfiles/pip_upgrade.py"
+
+alias -g python="python3"
+alias -g pip="pip3"
+
+alias dl="it2dl" # iterm2 download command
+alias icat="imgcat" # iterm2 inline image preview
+
+#export WORKON_HOME=~/Projects/Envs
+#source /usr/local/bin/virtualenvwrapper.sh
+#source /usr/local/opt/autoenv/activate.sh
